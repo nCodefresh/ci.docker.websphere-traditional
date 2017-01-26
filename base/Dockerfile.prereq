@@ -32,7 +32,7 @@ USER $user
 ARG URL
 
 ###################### IBM Installation Manager ##########################
-
+RUN echo $URL
 # Install IBM Installation Manager
 RUN wget -q $URL/Install_Mgr_v1.6.2_Lnx_WASv8.5.5.zip -O /tmp/IM.zip
 RUN mkdir /tmp/im &&  unzip -qd /tmp/im /tmp/IM.zip \
