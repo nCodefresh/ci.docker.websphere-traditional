@@ -1,0 +1,11 @@
+version: '1.0'
+steps:
+
+  build-image:
+    type: build
+    image_name: ncodefresh/websphere
+    dockerfile: Dockerfile.prereq
+    working_directory: ${{main_clone}}/base
+    tag: ${{CF_BRANCH}}
+    build_arguments:
+      - URL=http://www-01.ibm.com/software/passportadvantage
